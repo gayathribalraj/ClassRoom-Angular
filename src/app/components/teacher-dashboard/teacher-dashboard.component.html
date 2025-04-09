@@ -1,0 +1,54 @@
+
+
+    <h2>Maths Teacher</h2>
+    <h4>Create the Questions</h4>
+
+    <div class="container">
+        <div class="leftside-menu">
+            <p style="cursor: pointer;" onclick="toggleMenu()">Classes</p>
+            <ul id="menu-ul">
+                <li><a href="maths.html">Mathematics</a></li>
+                <li><a href="science.html">Science</a></li>
+                <li><a href="english.html">English</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </div>
+
+
+
+        <div class="question-container">
+            <div class="question-box" *ngFor = "let value of Questions">
+
+            <div>{{value.num1}}</div>
+            <div>{{value.operator}}</div>
+            <div>{{value.num2}}</div>
+
+            </div>
+        </div>
+
+
+
+        <div class="task-maker-container">
+
+            <div class="task-creation-wizard">
+                <h4>Create a Mathematics Question</h4>
+                <label>Number 1</label>
+                <input type="number" [(ngModel)]="num1"  placeholder="Enter N1" style="margin-bottom: 20px;" /><br>
+                <label>Number 2</label>
+                <input type="number" [(ngModel)]="num2"  placeholder="Enter N2" style="margin-bottom: 20px;" /><br>
+                <label>Operator</label>
+                <select [(ngModel)]="operator" style="margin-bottom: 20px;">
+                    <option value="+">+</option>
+                    <option value="*">*</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                </select><br>
+
+                <button (click)="createQuestion()">Create Question</button>
+                <button (click)="clearQuestions()">Clear Questions</button>
+            </div>
+        </div>
+    </div>
+
+
+
