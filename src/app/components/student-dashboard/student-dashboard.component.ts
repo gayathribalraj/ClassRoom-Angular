@@ -22,10 +22,11 @@ export class StudentLoginComponent {
 
 
   ngOnInit(){
-    let data:any = localStorage.getItem("Questions") ;
+    let data:any = localStorage.getItem("Questions");
     this.problems = JSON.parse(data);
     console.log(this.problems);
   }
+
 
   submitAns(){
    let allAnswered = true ;

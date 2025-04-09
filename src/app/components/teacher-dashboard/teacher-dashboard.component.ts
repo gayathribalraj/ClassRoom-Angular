@@ -19,32 +19,45 @@ export class TeacherLoginComponent {
 
   ngOnInit() {
     let queData:any = localStorage.getItem("Questions");
-    this.Questions = JSON.parse(queData);
- 
-  }
-
-  createQuestion(){
-    if (!this.num1 || !this.num2 || !this.operator) {
-      alert("Please Fill all Input Fields.");
-      return;
+    if(queData) {
+      this.Questions = JSON.parse(queData);
     }
-
-    let questionData = {
-      sno: this.Questions.length + 1,
-      num1: this.num1,
-      num2: this.num2,
-      operator: this.operator,
-      ans: this.answerForQuestion(this.num1, this.num2, this.operator),
-    };
-
-    console.log("questionData", questionData)
-
-    this.Questions.push(questionData);
-    localStorage.setItem("Questions", JSON.stringify(this.Questions));
-
-    this.clearInputData()
   }
 
+  /*
+    @Desc        To Create Questions List
+    @Params      none
+    @Return      
+    @author      Gayathri
+    @CreatedOn   08/04/2025
+  */
+  createQuestion(){
+    try{
+      if (!this.num1 || !this.num2 || !this.operator) {
+        alert("Please Fill all Input Fields.");
+        return;
+      }
+  
+      let questionData = {
+        sno: this.Questions.length + 1,
+        num1: this.num1,
+        num2: this.num2,
+        operator: this.operator,
+        ans: this.answerForQuestion(this.num1, this.num2, this.operator),
+      };
+  
+      console.log("questionData", questionData)
+  
+      this.Questions.push(questionData);
+      localStorage.setItem("Questions", JSON.stringify(this.Questions));
+  
+      this.clearInputData()
+    }
+    catch(error) {
+      console.log("error-createQuestion", error)
+    }
+  }
+   
   clearInputData() {
     this.num1 = undefined
     this.num2 = undefined
