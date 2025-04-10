@@ -1,0 +1,28 @@
+.leftside-menu{
+    max-width: 15%;
+    min-width: 100px;
+    height: 50vh;
+    background-color: #ccc;
+    color: black;
+    margin: 0;
+    padding: 1em;
+    margin-top: 0;
+    padding: 0;
+}
+
+.menu-active{
+    display: none;
+}
+#menu-ul,li
+{
+    padding: 10px;
+}
+#menu-ul,li,a
+{
+    color: rgba(57, 2, 66, 0.897);
+    text-decoration: none;
+
+}
+
+
+

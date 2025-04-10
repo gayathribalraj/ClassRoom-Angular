@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MenuComponent } from '../menu/menu.component';
+import { QuestionContainerComponent } from '../question-container/question-container.component';
 
 @Component({
   selector: 'app-teacher-login',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,MenuComponent,QuestionContainerComponent],
   templateUrl: './teacher-dashboard.component.html',
   styleUrl: './teacher-dashboard.component.scss'
 })
