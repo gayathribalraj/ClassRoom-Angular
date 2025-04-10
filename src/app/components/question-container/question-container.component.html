@@ -1,10 +1,18 @@
-<app-menu></app-menu>
-<div class="question-container">
-    <div class="question-box" *ngFor = "let value of Questions">
 
-    <div>{{value.num1}}</div>
-    <div>{{value.operator}}</div>
-    <div>{{value.num2}}</div>
 
+<!-- <h2 *ngIf="mathsShow">Maths Teacher</h2>
+<h2 *ngIf="scienceShow">Science Teacher</h2>
+<h2 *ngIf="englishShow">English Teacher</h2> -->
+
+<div class="container">
+    <div *ngIf="mathsShow" class="question-container">
+        <div class="question-box" *ngFor = "let value of showQuestions">
+    
+        <div>{{value.num1}}</div>
+        <div>{{value.operator}}</div>
+        <div>{{value.num2}}</div>
+    
+        </div>
     </div>
+    
 </div>

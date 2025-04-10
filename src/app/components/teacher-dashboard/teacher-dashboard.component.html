@@ -1,12 +1,16 @@
 
-
     <h2>Maths Teacher</h2>
     <h4>Create the Questions</h4>
 
     <div class="container">
+        <app-menu></app-menu>
+        <app-question-container [showQuestions]="Questions"></app-question-container>
+        <app-task-maker-container (QuestionsList)="passQuestions($event)"></app-task-maker-container>
+    </div>
+     
 
-      <app-menu></app-menu>
-     <app-question-container></app-question-container>
+
+
 
 
 
@@ -80,7 +84,5 @@
             </div>
         </div> -->
         
-    </div>
-
 
 

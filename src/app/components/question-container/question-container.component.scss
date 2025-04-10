@@ -15,9 +15,10 @@ ul{
     padding: 0%;
     display: flex;
     flex-flow: column wrap;
-    width: 100%;
+    width: 50vw;
     height: 50vh;
     gap:20px;
+    
    
 }
 
@@ -102,34 +103,5 @@ input[type="number"] {
     font-size: 20px;
     cursor: pointer;
 }
-
-
-
-// menu 
-
-.leftside-menu{
-    max-width: 15%;
-    min-width: 100px;
-    height: 100vh;
-    background-color: #ccc;
-    color: black;
-    margin: 0;
-    padding: 1em;
-}
-
-.menu-active{
-    display: none;
-}
-#menu-ul,li
-{
-    padding: 10px;
-}
-#menu-ul,li,a
-{
-    color: rgba(57, 2, 66, 0.897);
-    text-decoration: none;
-
-}
-
 
 

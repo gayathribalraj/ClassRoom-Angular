@@ -1,20 +1,24 @@
-<div class="task-maker-container">
+<div class="container">
+    <div class="task-maker-container">
 
-    <div class="task-creation-wizard">
-        <h4>Create a Mathematics Question</h4>
-        <label>Number 1</label>
-        <input type="number" [(ngModel)]="num1"  placeholder="Enter N1" style="margin-bottom: 20px;" /><br>
-        <label>Number 2</label>
-        <input type="number" [(ngModel)]="num2"  placeholder="Enter N2" style="margin-bottom: 20px;" /><br>
-        <label>Operator</label>
-        <select [(ngModel)]="operator" style="margin-bottom: 20px;">
-            <option value="+">+</option>
-            <option value="*">*</option>
-            <option value="-">-</option>
-            <option value="/">/</option>
-        </select><br>
-
-        <button (click)="createQuestion()">Create Question</button>
-        <button (click)="clearQuestions()">Clear Questions</button>
+        <div class="task-creation-wizard">
+            <h4>Create a Mathematics Question</h4>
+            <label>Number 1</label>
+            <input type="number" [(ngModel)]="num1" placeholder="Enter N1" style="margin-bottom: 20px;" /><br>
+            <label>Number 2</label>
+            <input type="number" [(ngModel)]="num2"  placeholder="Enter N2" style="margin-bottom: 20px;" /><br>
+            <label>Operator</label>
+            <select [(ngModel)]="operator" style="margin-bottom: 20px;">
+                <option value="+">+</option>
+                <option value="*">*</option>
+                <option value="-">-</option>
+                <option value="/">/</option>
+            </select><br>
+    
+            <button (click)="createQuestion()">Create Question</button>
+            <button (click)="clearQuestions()">Clear Questions</button>
+        </div>
     </div>
 </div>
+
+
