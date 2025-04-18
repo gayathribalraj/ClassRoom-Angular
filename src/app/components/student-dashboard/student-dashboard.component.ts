@@ -56,11 +56,19 @@ export class StudentLoginComponent {
 
      studentValue = value.ans == value.answer
     })
+
+    
    
 
   }
+  restart() {
+    this.answer = [];
+    this.submitData = false;
+  }
 
 
+
+ 
 
   
 
